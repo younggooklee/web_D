@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* 태그초기화 */
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:inherit}
+a:link, a:visited, a:active{color:#888;}
+img{vertical-align: middle;}
+
+/* 레이아웃 정렬 */
+.site-header{border-bottom: 1px solid #888;}
+.container{width: 1200px; margin: 0 auto;}
+.site-content{display: flex; justify-content: space-between;}
+.site-footer{background: #eee;}
+
+/* .site-header */
+.site-header div{display: flex; justify-content: space-between; height: 100px;}
+.header__logo a{margin-left: 20px;}
+
+.gnb a{display: block; transition: .3s;}
+.gnb>ul{display: flex; margin-top: 50px;}
+.gnb>ul>li{position: relative;}
+
+.gnb>ul>li>a{padding: 0 40px; line-height: 50px; height: 50px; font-size: 17px; }
+.gnb>ul>li:hover>a{background: #4a4948; color: #fff;}
+
+.gnb>ul>li>ul{position: absolute; left: 0; right: 0; display: none;}
+/* .gnb>ul>li:hover>ul{display: block;} */
+.gnb>ul>li>ul a {line-height: 40px; text-align: center; background:#CAAC7D;
+     color: #fff;}
+.gnb>ul>li>ul a:hover{color: darkgoldenrod; background: #fff;}
+
+/* slide */
+.slide{height: 300px; overflow: hidden;}
+.slide li{height: 300px;}
+.slide li:nth-child(1){background-image: url(../images/slide1.jpg);}
+.slide li:nth-child(2){background-image: url(../images/slide2.jpg);}
+.slide li:nth-child(3){background-image: url(../images/slide3.jpg);}
+
+.site-content article{width: calc(100%/3); padding: 20px;}
+.content__title{font-size: 20px; padding-bottom: 15px; margin-left: 20px;}
+.notice li{line-height: 200%; color:#888; margin-left: 10px;}
+.notice a:hover{background: skyblue; color:#fff;}
+
+.gallery ul{display: flex; justify-content: space-around;}
+.gallery img{transition:.3s; opacity: 0.8; }
+.gallery img:hover{opacity: 1;}
+
+/* 시험과는 무관 { */
+.gallery li:hover img {transform: scale(1.03);}
+.gallery li {overflow: hidden; width: 100px;}
+
+/* banner */
+.banner ul {text-align: center;}
+.banner h2 {font-size: 20px; padding-bottom: 15px; margin-left: 45px;}
+.banner img {transition: 0.5s; opacity: 0.8;}  
+.banner img:hover{opacity: 1;}
+
+/* footer */
+.site-footer>div{height: 100px; display: flex; justify-content:space-between; align-items: center;}
+.footer__logo{padding: 0 30px;}
+.copyright{text-transform: uppercase; color: #888;}
+.sns{width: 120px; display: flex; margin-right: 50px;}
+.sns li{margin: 0 10px;}
+
+/* layer popup */
+.layer{display: none; position: fixed; left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,.5); z-index: 100;}
+.layer>div{background: #fff; padding: 30px; width: 600px; margin: 150px auto;}
+.layer h3{color:orange;}
+.layer p{ margin-top: 20px; text-align: justify;}
+.layer__btm{margin-top: 20px; text-align: right;}
+.layer span{color: red;}
